@@ -1,0 +1,8 @@
+name: Output issues information
+on: issues
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Issues context
+        run: echo "${{ toJSON(issues) }}"
